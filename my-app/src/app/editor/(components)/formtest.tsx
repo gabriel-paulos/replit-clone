@@ -56,10 +56,10 @@ export function ProfileForm() {
                 
                 {/* This should have the name of the project when it was started */}
 
-                <Input placeholder="testName" {...field} />
+                <Input placeholder="test name" {...field} />
               </FormControl>
               <FormDescription>
-                This is your public display name.
+                This is your project's display name.
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -73,10 +73,14 @@ export function ProfileForm() {
             <FormItem>
               <FormLabel>Description</FormLabel>
               <FormControl>
-                <Input className="h-32 w-full resize-none" placeholder="What does this App do?" {...field} />
+                {/*  <Input className="h-32 w-full resize-none leading-tight" placeholder="What does this App do?" {...field} /> */}
+               
+                <textarea className="peer h-36 min-h-[100px] w-full resize-none rounded-md border border-input bg-transparent px-2 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-1 focus:border-white focus:outline-0 disabled:resize-none disabled:border-0 disabled:bg-blue-gray-50" placeholder="What does this App do?" {...field}
+                ></textarea>
+
               </FormControl>
               <FormDescription>
-                We will use this as a description.
+                This as a description.
               </FormDescription>
               <FormMessage />
             </FormItem>
