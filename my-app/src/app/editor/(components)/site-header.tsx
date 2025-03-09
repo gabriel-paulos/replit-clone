@@ -1,6 +1,12 @@
 "use client"
 
 import { 
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar"
+
+import { 
     SidebarIcon,
     SquareArrowOutUpRight,
     GitFork,
@@ -9,6 +15,7 @@ import {
     Boxes,
     Share,
     Trash,
+    Server,
  } from "lucide-react"
 
 import { Command } from "@/components/ui/command"
@@ -51,11 +58,15 @@ import {
 
 import { ProfileForm } from "./formtest";
 
+import { SearchForm } from "./searchform";
+
 export function EditorHeader(){
 
     return (
 <header className="flex sticky top-0 z-50 w-full items-center border-b bg-background">
-  <div className="flex h-[--header-height] w-full items-center gap-2 px-4">
+  <div className="flex h-[--header-height] w-full items-center gap-2 px-4 justify-between">
+    
+    {/* First DropDown for Project Metadata Related Info */}
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <div className="h-8 w-16 flex cursor-pointer items-center justify-center hover:bg-accent hover:text-accent-foreground rounded-lg ">
@@ -68,6 +79,7 @@ export function EditorHeader(){
         <div className="flex items-center gap-2">
           <DropdownMenuItem className="p-0 hover:bg-transparent">
             <Button variant="outline" className="hover:bg-muted ml-auto">
+             
               {/* TODO: Add user avatar with initials */}
               GabrielP9
             </Button>
@@ -109,9 +121,20 @@ export function EditorHeader(){
 
       </DropdownMenuContent>
     </DropdownMenu>
-    <Separator orientation="vertical" />
-    <Command />
+    
+    {/* Optional TODO: Second DropDown for Resource Related Info */}
+    
+    {/* Invite & avatar */}
+    <div className="flex items-center gap-2 ml-auto">
+        <SearchForm className="w-full sm:ml-auto sm:w-auto" />
+        
+        <Avatar className="cursor-pointer hover:bg-accent hover:text-accent-foreground">
+          <AvatarImage src="https://avatars.githubusercontent.com/u/139426" alt="GabrielP9" />
+          <AvatarFallback>GP</AvatarFallback>
+        </Avatar>
+    </div>
   </div>
+
 </header>
 
     )
