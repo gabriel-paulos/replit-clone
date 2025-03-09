@@ -20,6 +20,7 @@ export default function Home() {
 
 <Link className={buttonVariants({ variant: "secondary" })} scroll={false} href='/dashboard'>Dashboard</Link>
 
+<Link className={buttonVariants({ variant: "secondary" })} scroll={false} href='/editor'>Editor</Link>
 
 
 </main>

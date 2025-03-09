@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 
 import { Editor } from '@monaco-editor/react';
 
-function App() {
+export default function Editorboard() {
 
-    return (<Editor height="90vh" defaultLanguage='javascript' defaultValue='// some comment'>;)
+    return (
+        <p>ehhafhafhjafhaj</p>
+    )
 }
+
