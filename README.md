@@ -10,3 +10,4 @@ Current Checklist:
 - [ ] Collaborative Features
 - [ ] Connect to Backend
 - [ ] Create Servers
+- [ ] Add Middleware
